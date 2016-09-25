@@ -1,0 +1,35 @@
+/* line 3, ../app/styles/angular-ticker.scss */
+.tickers * {
+  box-sizing: border-box;
+}
+/* line 7, ../app/styles/angular-ticker.scss */
+.tickers.active {
+  display: block;
+  height: 80px;
+  overflow-y: hidden;
+  margin-bottom: 0;
+}
+/* line 13, ../app/styles/angular-ticker.scss */
+.tickers li {
+    line-height: 24px;
+  transition: opacity 0.3s ease, margin 1s ease;
+}
+.tickers li p.bq-title{
+    font-size: 18px;
+    line-height: 24px;
+}
+.tickers li p{
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* line 18, ../app/styles/angular-ticker.scss */
+.tickers .fade-out {
+  opacity: 0;
+}
+/* line 22, ../app/styles/angular-ticker.scss */
+.tickers .minus-margin-top {
+  margin-top: -92px;
+}

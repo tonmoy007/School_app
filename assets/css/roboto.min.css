@@ -1,0 +1,21 @@
+@font-face{font-family:RobotoDraft;src:local('RobotoDraft'),local('RobotoDraft-Regular'),local('Roboto-Regular'),url(../fonts/RobotoDraftRegular.woff2) format('woff2'),url(../fonts/RobotoDraftRegular.woff) format('woff')}@font-face{font-family:RobotoDraft;font-weight:500;src:local('RobotoDraft Medium'),local('RobotoDraft-Medium'),local('Roboto-Medium'),url(../fonts/RobotoDraftMedium.woff2) format('woff2'),url(../fonts/RobotoDraftMedium.woff) format('woff')}@font-face{font-family:RobotoDraft;font-weight:700;src:local('RobotoDraft Bold'),local('RobotoDraft-Bold'),local('Roboto-Bold'),url(../fonts/RobotoDraftBold.woff2) format('woff2'),url(../fonts/RobotoDraftBold.woff) format('woff')}@font-face{font-family:RobotoDraft;font-style:italic;src:local('RobotoDraft Italic'),local('RobotoDraft-Italic'),local('Roboto-Italic'),url(../fonts/RobotoDraftItalic.woff2) format('woff2'),url(../fonts/RobotoDraftItalic.woff) format('woff')}
+/*# sourceMappingURL=roboto.min.css.map */
+@font-face{font-family:RobotoLight;src:url("../fonts/Roboto-Light.ttf") format('truetype');src:url("../fonts/Roboto-Light.woff")format('woff')}
+@font-face{font-family:Lindy;src:url(../fonts/LindysDiner.ttf) format('truetype')}
+@font-face{font-family:Bebas;src:url("../fonts/BebasNeue.otf") format('Opentype');}
+@font-face{font-family:RobotoThin;src:url("../fonts/Roboto-Thin.ttf") format('Truetype');}
+@font-face{font-family:Cravier;src:url("../fonts/CaviarDreams.ttf") format('Truetype');}
+@font-face{font-family:AlwaysH;src:url("../fonts/Maquinada_Serif.ttf") format('Truetype');}
+@font-face{font-family:logo;src:url("../fonts/Andrea-Normal.otf") format('Opentype');}
+@font-face{font-family:Para;src:url("../fonts/Gidolinya-Regular.otf") format('Opentype');}
+@font-face{font-family:HeadFont;src:url("../fonts/bebas.ttf") format('Truetype');}
+@font-face{font-family:Lindy;src:url("../fonts/LindysDiner.ttf") format('Truetype');}
+@font-face{font-family:Oxygen;src:url("../fonts/Oxygen-Bold.ttf") format('Truetype');}
+@font-face{font-family:Oxygen;src:url("../fonts/Oxygen-Light.ttf") format('Truetype');}
+@font-face{font-family:Oxygen;src:url("../fonts/Oxygen-Regular.ttf") format('Truetype');}
+@import  url(https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lora:400,700,700italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(https://www.google.com/fonts#ReviewPlace:refine/Collection:Raleway:400,300,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Crete+Round);
+@font-face{font-family:Bluebrush;src:url("../fonts/blowbrush.otf") format('Opentype');}

@@ -1,0 +1,339 @@
+/* YOUR CUSTOM STYLES */
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+/* Navigation*/
+body{
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+.navbar {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.top-nav-collapse {
+    background-color:#dadada;
+}
+.navbar-brand img{
+    display: inline-block;
+    width: 90px;
+    transition: width .4s ease;
+    -moz-transition: width .4s ease;
+    -webkit-transition: width .4s ease;
+    -o-transition: width .4s ease;
+    -ms-transition: width .4s ease;
+}
+.navbar-brand {
+    overflow:visible;
+}
+.navbar-brand span{
+    position: relative;
+    top: 20px;
+    padding-left: 10px;
+    width: 100px;
+    line-height: .8;
+    display: inline-block;
+    font-size: 2.5rem;
+    transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+}
+
+
+@media (max-width: 990px) {
+    .navbar-nav{
+        width: calc(100% - 240px)
+        }
+    }
+@media (max-width: 768px) {
+    .navbar-nav{
+        width: calc(100% - 190px);
+        min-width: 200px;
+    }
+}
+.top-nav-collapse .navbar-brand img{
+    width: 3rem;
+
+}
+.side-nav-bar{
+    margin-top: 10px;
+}
+.top-nav-collapse .navbar-brand span{
+    font-size: 1.4rem;
+    line-height: .9;
+    top: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color:#dadada;
+    }
+}
+/*Intro*/
+
+.view {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .full-bg-img,
+    .view {
+        height: auto;
+        position: relative;
+    }
+    .full-bg-img{
+        min-height: 100vh;
+    }
+    .navbar-brand img{
+        width: 60px;
+    }
+    .navbar-brand span{
+        font-size: 1.2rem;
+        width: 70px;
+    }
+    .some-products{
+        margin-top: -200px;
+    }
+    
+}
+.cool-border{
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: #e9eaed #e9eaed #d1d1d1;
+}
+.cool-shadow{
+    box-shadow:  0 1px 2px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.3);
+    -oz-box-shadow:0 1px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow:0 1px 2px rgba(0,0,0,0.3);
+}
+.description {
+    padding-top: 25%;
+    padding-bottom: 3rem;
+    color: #fff
+}
+
+@media (max-width: 992px) {
+    .description {
+        padding-top: 3rem;
+        text-align: center;
+    }
+}
+
+
+.login-drop{
+    width: 300px;
+    padding: 10px;
+    left: auto;
+    right: 0;
+    margin-top: 20px;
+}
+.login{
+    position: relative;
+}
+.login h1{
+    text-align: center;
+    background-color: #4285F4;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: 15px;
+}
+.login .login-logo{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.login::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -27px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 13.5px 23px 13.5px;
+    border-color: transparent transparent #ffffff transparent;
+    line-height: 0px;
+    _border-color: #000000 #000000 #ffffff #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+.login-form{
+    float: none!important;
+    padding-top: 40px;
+    position: relative;
+    
+}
+.login-form .form-group input.form-control{
+    color: #222;
+    margin-left: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+.space{
+    display: block;
+    margin-top: 20px;
+}
+.space.md60{
+    margin-top: 60px;
+}
+.login-form .form-group label{
+    top:0;
+}
+.login-form .form-group .btn{
+    display: inherit;
+}
+.login-form .form-group.link{
+    text-align: center;
+}
+.card.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.card .img-fluid{
+    min-height: 125px;
+}
+.img-fluid.col-xs-4{
+    padding:0;
+}
+.card-block.col-xs-8{
+    text-align: left;
+}
+.card-block.col-xs-8 .price{
+    color: #f99669;
+    padding: 20px;
+    padding-left: 0;
+    font-size: 1.2rem;
+}
+
+section{
+    padding: 60px 10px;
+
+}
+section.quote{
+    text-align: center;
+    color: #fff;
+    background: #dadada;
+}
+section.product{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.slide-card{
+    margin-right: 10px;
+}
+@media(min-width: 400px){
+    section.some-products{
+    padding:0; 
+    margin-top: -190px;
+}
+}
+ul.rating li{
+    display: inline-block;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.card-footer{
+    background-color: transparent;
+}
+.card-footer .btn-sm{
+    margin: 0 8px;
+}
+.facebook-page-container{
+    height: 620px;
+    padding: 0 20px ;
+    overflow: hidden;
+    position: relative;
+
+}
+.facebook-page{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
+
+
+}
+.facebook-page:hover{
+    overflow-y: scroll;
+}
+.product{
+    text-align: center;
+}
+.product-section-container{
+    padding-top: 60px;
+}
+.caution{
+    border-radius: 10px 0px ;
+    border:10px solid #fff;
+}
+.map-container{
+    border-radius: 20px 10px;
+}
+.chip{
+    display: inline-block;
+    font-size: 13px;
+    color: rgba(0,0,0,.6);
+    padding: 0 12px;
+    border-radius: 16px;
+    background-color: #eceff1;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+        font-weight: 500;
+    height: 32px;
+    line-height: 32px;
+}
+.chip img{
+        float: left;
+    margin: 4px 8px 0 -8px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.dates{
+    text-align: center;
+}
+.testimonial{
+    color: #fff;
+    text-align:center;
+
+}
+.testimonial p{
+    width: 80%;
+    display: inline-block;
+}
+.testimonial p i{
+    font-size: 1.4em;
+    margin-right: 4px;
+}
+.carousel-control{
+    background-image: none!important;
+}
+.social-section ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.carousel-control .icon-next,.carousel-control .icon-prev{
+    font-size: 56px;
+    margin-top: -23px;
+}

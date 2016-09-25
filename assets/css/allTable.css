@@ -1,0 +1,146 @@
+table.dataTable.no-footer,table.dataTable thead th, table.dataTable thead td {
+   border-bottom:  1px solid #d1d1d1;
+    border-bottom-color: #d1d1d1;
+    color: #fff;
+    
+}
+table.dataTable thead th, table.dataTable thead td{
+   background-color: rgba(56, 31, 205, 0.38);
+    color: #fefefe;
+}
+table.dataTable thead th, table.dataTable thead td:first-child{
+    border-top-left-radius: 3px;
+}
+table.dataTable thead th, table.dataTable thead td:last-child{
+    border-top-right-radius: 3px;
+}
+.table-content.visible{
+    display: block;
+}
+.table-content{
+    display: none;
+}
+#cooks-table_wrapper .row:first-child{
+    line-height: 65px;
+}
+select.input-sm{
+    height: 45px;
+    width: auto;
+    line-height: 30px;
+    font-size: 19px;
+}
+.form-control:focus{
+    border-color: #8876f8;
+}
+.data-list{
+    width: 100%;
+    padding: 20px;
+    min-width: 200px;
+    overflow: auto;
+}
+.data-list h2{
+    margin-bottom: 20px;
+}
+thead tr th a{
+    color: white;
+}
+thead tr th a:hover,
+thead tr th a:focus{
+    color: #ddd;
+    
+    text-decoration: underline;
+}
+#cooks-table thead{
+    color: #fefefe;
+    background-color: rgba(56, 31, 205, 0.38);
+}
+.display thead tr th{
+    text-align: center;
+    vertical-align: middle;
+}
+.blue-list li{
+    display: inline-block;
+    margin-right: 5px;
+    color: #fefefe;
+    background-color: rgba(56, 31, 205, 0.38);
+    font-size: 1em;
+    line-height: 1.2em;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+.blue-list li:last-child{
+    margin-bottom: 0;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+    background-color: #8876f8;
+    border-color: #8876f8;
+}
+.boundery-links{
+    color: #8d8d8d;
+}
+.pagination ul li > a:hover, .pagination ul li > span:hover, .pagination ul li > a:focus, .pagination ul li > span:focus{
+    background-color: #8876f8;
+    border-color: #8876f8;
+}
+.pagination ul li > a:active, .pagination ul li > span:active{
+    background-color: #8876f8;
+    border-color: #8876f8;
+}
+.table-body{
+    background-color: #eaeaff;
+    color: #666;
+}
+.action a.btn{
+    margin-top:0;
+    margin: 3px;
+    font-size: .7em;
+}
+.table-body tr:last-child,table.dataTable.no-footer{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    
+}
+.dataTables_length{
+    clear: both;
+    float: left;
+    margin-bottom: 10px;
+}
+.dataTables_filter{
+    float: right;
+    margin-bottom: 10px;
+}
+.DTTT_container .DTTT_button{
+    line-height: 30px;
+    background-color: #8876f8;
+    color: #fefefe;
+}
+.pagination ul li.previous.disabled{
+    pointer-events: none;
+}
+.pagination ul li.previous.disabled.active a{
+    background-color: #ddd;
+}
+.pagination ul li.previous.active a,.pagination ul li.next.active a{
+    background-color: #029AAC;
+}
+
+
+/******************Angular JS animation***************/
+
+/* The starting CSS styles for the enter animation */
+.animate-table.ng-enter {
+  transition:.1s linear all;
+  
+}
+
+/* The finishing CSS styles for the enter animation */
+
+/* now the element will fade out before it is removed from the DOM */
+.animate-table.ng-leave {
+  transition:.1s linear all;
+  
+}
+
+/* there is no need to define anything inside of the destination
+CSS class since the keyframe will take charge of the animation */

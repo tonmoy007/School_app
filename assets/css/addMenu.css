@@ -1,0 +1,54 @@
+.form-container{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding:15px 20px 20px 20px;
+}
+.inner-form{
+    display: inline-block;
+    width: 70%;
+    max-width: 764px;
+    min-width: 260px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.inner-form .logo,.inner-form .logo{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+.form-control-wrapper .form-control:focus~.floating-label{
+    color:rgba(241,146,54,1)!important;
+}
+.form-control.focus,.form-control:focus{
+    padding: 5px;
+    background-image: linear-gradient(rgba(241,146,54,1),rgba(241,146,54,1)),linear-gradient(#ddd,#ddd)!important;
+}
+.form-inline .input-group{
+    width: 49.50%;
+}
+@media(max-width:768px){
+  .form-inline .input-group{
+    width: 100%;
+}  
+}
+.form-control{
+padding: 5px !important;
+}
+.alert-info{
+    background-color: #aaa;
+}
+.dropzone{
+    min-height: 150px;
+    display: block;
+    line-height: 150px;
+    border :5px dashed #ddd;
+    
+}
+
+.dz-default.dz-message span{
+    font-family: RobotoLight;
+    font-size: 20px;
+    color: #aaa;
+}

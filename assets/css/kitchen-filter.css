@@ -1,0 +1,70 @@
+.kitchen-filter{
+    position: absolute;
+    width: 240px;
+    margin-left: -20000px;
+    height:calc(100vh - 100px);
+    overflow: hidden;
+    z-index: -1;
+    border-radius: 3px;
+    z-index: 2;
+}
+@media(min-width:990px){
+    .kitchen-filter{
+        margin-left: -260px;
+    }
+}
+search-filter{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    margin-top: calc(150px + 1.9em);
+}
+.kitchen-filter.fixed{
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+}
+.kitchen-filter.bottom-margin{
+    bottom: 20px;
+}
+.kitchen-filter-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+search-filter.food-search{
+    margin-top: 0;
+    top: 20px;
+}
+.kitchen-filter-container .filter-logo{
+    font-size: .9em;
+    width: 100%;
+    text-align: left;
+    margin: 20px 0 10px;
+    line-height: 1.2em;
+    vertical-align: middle;
+}
+.kitchen-filter-container .filter-search{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+.kitchen-filter-container .filter-search input{
+    width: calc(100% - 50px);
+    padding-left: 40px;
+    background-position-x:10px;
+    color: rgb(26,26,26);
+}
+.kitchen-filter-container .filter-search input:focus{
+    width: initial;
+    
+}
+.kitchen-filter-container .filter-search input[type=search]:hover{
+    color: #232323;
+}
+

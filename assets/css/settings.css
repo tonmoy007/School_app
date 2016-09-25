@@ -1,0 +1,125 @@
+.profile{
+    font-size: 80%;
+    position: relative;
+}
+.profile .input-group-left{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    height: 100%;
+}
+.profile .input-group{
+    width: 100%;
+    display: inline-block;
+}
+
+.profile .input-group input{
+    width: 70%;
+    display: inline-block;
+}
+.profile .input-group button{
+    width: 30%;
+    
+}
+.profile>kitchen-settings ul.settingslist>li,.profile>profile-settings>ul>li{
+    display: inline-block;
+    margin:10px 0;
+    width: 100%;
+    position: relative;
+    
+}
+
+.spinner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    font-size: 3em;
+    line-height: 200px;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 4;
+    background-color: rgba(255,255,255,.9);
+}
+.profile ul li >a {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    line-height: 24px;
+    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.profile ul li a.active {
+    z-index: 5;
+}
+.profile ul li a.active i{
+    color: #cc5555;
+}
+.profile ul li a::selected{
+    background: #ded;
+}
+.profile ul li form{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    padding: 20px;
+    padding-top: 30px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow:  0 1px 1px rgba(0,0,0,0.3);
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3);
+    -oz-box-shadow:0 1px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3);
+    
+}
+.profile ul li span.option-title{
+    width:100%;
+    font-size: .9em;
+    padding-bottom: 10px;
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.profile ul li span.option-value{
+    color: #777;
+    font-family: 'Open Sans';
+    transition: linear
+    
+}
+.form-error-message{
+    font-size: .7em;
+}
+.option-title{
+    font-weight: bold;
+}
+.profile>ul li label{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: .75em;
+}
+.profile >kitchen-settings >ul.visible{
+    display: block;
+}
+.profile>kitchen-settings >ul{
+    display: none;
+}
+#settings-card > div.card-body.ng-scope > div:nth-child(2) > div > div.profile > kitchen-settings > ul > li:nth-child(5) > span.option-value > ul{
+    display: inline-block;
+    width: 100%;
+}
+ul.service_areas li{
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+ul.service_areas li:last-child{
+    margin-right: 0;
+}

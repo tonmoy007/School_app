@@ -1,0 +1,93 @@
+.kitchen-info-div{
+    padding: 20px;
+    margin: 20px 0 0 ;
+}
+.kitchen-menu{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.kitchen-body{
+    background: #ededed;
+}
+.kitchen-subtitle{
+    margin-bottom: 10px;
+}
+.kitchen-body{
+    color: #333;
+    font-family: 'Open Sans';
+}
+.kitchen-name{
+    font-size: 40px;
+    color: #5d5d5d;
+    text-transform: capitalize;
+}
+.kitchen-logo{
+    padding-left: 0;
+}
+.kitchen.service-areas{
+    width: 100%;
+    margin: 10px 0;
+}
+.kitchen.service-areas li{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.share-links{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+}
+.share-links li{
+    display: inline-block;
+}
+/*
+.slide.ng-hide-add,
+.slide.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block!important;
+}
+.slide.ng-hide-add.ng-hide-add-active,
+.slide.ng-hide-remove {
+  opacity: 0;
+}
+.slide.ng-hide-add,
+.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+*/
+
+
+.todays-menu-slider{
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+.slider{
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 20px 10px 10px;
+}
+.slider img{
+    width: 100%;
+}
+.slider-title strong,.menu-title{
+    font-size: 35px;
+    font-family:'Open Sans';
+    line-height: 30px;
+    padding: 0;
+    vertical-align: middle;
+    color: #666;
+    padding: 10px 0;
+    display: inline-block;
+    width:100%;
+    margin: 10px 0;
+}
+.menu-title small{
+    font-size: .5em;
+    color: #888;
+}

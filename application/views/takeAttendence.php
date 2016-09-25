@@ -14,18 +14,19 @@
       <div class="md-dialog-content">
       <md-list-item class="table-head">
         
-            <span flex="30"><span>Name</span></span>
+            <span flex="20"><span>Name</span></span>
             <span flex="20"><span>Total</span></span>
-            <span flex="25">Attend</span>
-            <span flex="25" class="text-center">Absent</span>
+            <span flex="20">Attend</span>
+            <span flex="20" class="text-center">Absent</span>
+            <span flex='20'>Attendence(%)</span>
         
         <md-divider></md-divider>
       </md-list-item>
         <md-list-item ng-repeat="(key,class) in atClasses" class="table-list">
           
-          <h4 flex="30"><span>{{class.class_name}}</span></h4>
+          <h4 flex="20"><span>{{class.class_name}}</span></h4>
           <h5 flex="20"><span><strong>{{class.total_student}}</strong></span></h5>
-          <md-input-container md-no-float class="md-block" flex="25">
+          <md-input-container md-no-float class="md-block" flex="20">
           
             <input required name="attend{{key}}"  ng-model="class.present" aria-label="attendence{{class.class_name}}"/>
             
@@ -33,7 +34,10 @@
               <div ng-message="required">Attendence is required.</div>
             </div>
           </md-input-container>
-        <div flex="25" class="text-center"><span>{{class.total_student-class.present}}</span></div>
+        <div flex="20" class="text-center"><span>{{class.total_student-class.present}}</span></div>
+        <div flex="20" class="text-center">
+          <span>{{class.present/class.total_student*100|number:2}}%</span>
+        </div>
          <md-divider ng-if="!$last"></md-divider>
         </md-list-item>
         

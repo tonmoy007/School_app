@@ -31,8 +31,13 @@
 			this.isMenuOpen = false;
 			this.eventtype = mobilecheck() ? 'touchstart' : 'click';
 			this._initEvents();
-
 			var self = this;
+			this.closeMenu=function(){
+
+				if( !this.isMenuOpen ) return;
+				self._closeMenu();
+				// this.removeEventListener( self.eventtype, self.bodyClickFn ); 
+			}
 			this.bodyClickFn = function() {
 				self._closeMenu();
 				this.removeEventListener( self.eventtype, self.bodyClickFn );
@@ -42,6 +47,7 @@
 			var self = this;
 
 			if( !mobilecheck() ) {
+
 				this.trigger.addEventListener( 'mouseover', function(ev) { self._openIconMenu(); } );
 				this.trigger.addEventListener( 'mouseout', function(ev) { self._closeIconMenu(); } );
 			

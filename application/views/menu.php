@@ -1,7 +1,7 @@
 <ul id="gn-menu" class="gn-menu-main">
                 <li class="gn-trigger">
-                    <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-                    <nav class="gn-menu-wrapper gn-open-part">
+                    <a class="gn-icon gn-icon-menu" id="menu-icon"><span>Menu</span></a>
+                    <nav class="gn-menu-wrapper gn-open-part" id="gn-menu-wrapper">
                         <div class="gn-scroller">
                             <ul class="gn-menu">
                                 <li class="gn-search-item">
@@ -11,23 +11,23 @@
                                 </li>
                                 
                                 <li ng-if="user.user_type=='user'" report-menu></li>
-                                <li ng-if="user.user_type=='user'"><a href="#/submitted_reports" class="gn-icon gn-icon-article" >Submitted Reports</a></li>
+                                <li ng-if="user.user_type=='user'"><a ng-click="closeMenu()" href="#/submitted_reports" class="gn-icon gn-icon-article" >Submitted Reports</a></li>
                                 <li ng-if="user.user_type=='admin'">
                                     <info-menu></info-menu>
                                 </li>
                                 <li>
-                                    <a class="gn-icon gn-icon-archive " href="#/attendance">উপস্থিতি</a>
+                                    <a class="gn-icon gn-icon-archive " ng-click="closeMenu()"  href="#/attendance">উপস্থিতি</a>
                                     
                                 </li>
                                 <li>
-                                    <a class="gn-icon gn-icon-archive" href="#/notice-board">প্রজ্ঞাপন (নোটিশ)</a>
+                                    <a class="gn-icon gn-icon-archive" ng-click="closeMenu()"  href="#/notice-board">প্রজ্ঞাপন (নোটিশ)</a>
                                     
                                 </li>
                             </ul>
                         </div><!-- /gn-scroller -->
                     </nav>
                 </li>
-                <li><a href="#/" class="head-bar">{{app_name}}</a></li>
+                <li><a href="#/" ng-click="closeMenu()"  class="head-bar">{{app_name}}</a></li>
                 
                 <li> 
                 

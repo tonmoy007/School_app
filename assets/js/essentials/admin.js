@@ -72,6 +72,9 @@ app.controller('admin_school',function($scope,$http,$routeParams){
 }).controller('attendanceCtrl', function($scope,$http){
        $http.get('index.php/home/getAttendence',{}).then(function(response){
         $scope.attendence=response.data;
+        $scope.attendence.total=parseInt($scope.attendence.total);
+        $scopr.attendence.present=parseInt($scope.attendence.present);
+        $scope.attendence.percent=($scope.attendence.present/$scope.attendence.total)*100;
        },function(response){
 
        })
@@ -141,8 +144,12 @@ app.directive('menu',function($http){
             $scope.submenu.push(false);
             }
             elem.ready(function(){
-                new gnMenu( document.getElementById( 'gn-menu' ) );
+               $scope.menu=new gnMenu( document.getElementById( 'gn-menu' ) );
             })
+            $scope.closeMenu=function(){
+                // console.log($scope.menu);
+                $scope.menu.closeMenu();
+            }
             $http({
                 url:'index.php/home/getUser'
             }).success(function(response){

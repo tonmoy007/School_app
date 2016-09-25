@@ -19,32 +19,33 @@ app.config(function($routeProvider){
 app.controller('home',function($scope,$http,$mdDialog,$rootScope,
     $timeout, $mdSidenav,$mdToast){
 
-    $scope.user=[];
-    
-    $scope.submenu=[];
-    for(i=0;i<5;i++){
-    $scope.submenu.push(false);
-    }
-    $rootScope.classes=[];
-    $rootScope.ir_students=[];
-    $scope.date = new Date();
-    
-    $http({
-        url:'index.php/home/getUser'
-    }).success(function(response){
-        console.log(response)
-        if(response.success){
+            $scope.user=[];
+            $scope.app_name='Admin';
+            $scope.submenu=[];
+            for(i=0;i<5;i++){
+            $scope.submenu.push(false);
+            }
+            elem.ready(function(){
+               $scope.menu=new gnMenu( document.getElementById( 'gn-menu' ) );
+            })
+            $scope.closeMenu=function(){
+                // console.log($scope.menu);
+                $scope.menu.closeMenu();
+            }
+            $http({
+                url:'index.php/home/getUser'
+            }).success(function(response){
+                console.log(response)
+                if(response.success){
+                    $scope.user=response.user
+                }
+            }).error(function(response) {
+                /* Act on the event */
+            });
 
-            $scope.user=response.user
-            $scope.app_name=$scope.user.school_name
-        }
-    }).error(function(response) {
-        /* Act on the event */
-    });
-    $scope.customFullscreen=false;
-    $scope.addingClass=false;
-    $scope.redirectTo=function(link){
-        window.location=link;
+            $scope.redirectTo=function(link){
+                window.location=link;
+            }
     }
 }).controller('reportCtrl', function($scope,$routeParams,$http){
     $scope.type=$routeParams.type;

@@ -25,13 +25,8 @@ app.controller('home',function($scope,$http,$mdDialog,$rootScope,
             for(i=0;i<5;i++){
             $scope.submenu.push(false);
             }
-            elem.ready(function(){
-               $scope.menu=new gnMenu( document.getElementById( 'gn-menu' ) );
-            })
-            $scope.closeMenu=function(){
-                // console.log($scope.menu);
-                $scope.menu.closeMenu();
-            }
+            
+           
             $http({
                 url:'index.php/home/getUser'
             }).success(function(response){
@@ -46,7 +41,7 @@ app.controller('home',function($scope,$http,$mdDialog,$rootScope,
             $scope.redirectTo=function(link){
                 window.location=link;
             }
-    }
+    
 }).controller('reportCtrl', function($scope,$routeParams,$http){
     $scope.type=$routeParams.type;
     template=angular.element(document.getElementById('template'));
@@ -136,7 +131,12 @@ app.directive('menu',function(){
         link:function(scope,elem,attr){
             elem.ready(function(){
                 new gnMenu( document.getElementById( 'gn-menu' ) );
-            })
+            });
+             scope.closeMenu=function(){
+                // console.log($scope.menu);
+                $scope.menu.closeMenu();
+            }
+
         }
     }
 }).directive('reportMenu',function(){

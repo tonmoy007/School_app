@@ -25,6 +25,14 @@ class School_model extends CI_Model
         }
         return $data;
     }
+    function getClassName($id){
+        $query=$this->db->select('class_name')->where('id',$id)->from('class')->get();
+        $data;
+        foreach($query->result_array() as $row){
+            $data=$row['class_name'];
+        }
+        return $data;
+    }
     function addClass($user_id,$request){
         $data=array(
             'class_name'=>$request->class_name,
@@ -95,16 +103,28 @@ class School_model extends CI_Model
 
     }
 
-    function getAllIRStudents($user_id,$index=0){
+    function getAllIRStudents($user_id=null,$index=0,$length=5){
         $this->db->select('*');
         $this->db->from('irregular_student');
-        $this->db->where('user_id',$user_id);
-        $this->db->limit(5,$index);
-        $query=$this->db->get();
-        $data=array();
+        
+        if($user_id!=null)
+            $this->db->where('user_id',$user_id);
+
+        if($length!=null)
+            $this->db->limit(5,$index);
+            $query=$this->db->get();
+            $data=array();
         foreach($query->result_array() as $row){
+            $row['class_name']=$this->getClassName($row['class_id']);
             $data[]=$row;
+
         }
+        
+        if($length!=null){
+            $response['students']=$data;
+            $response['total']=$query->num_rows();
+        }
+
         return $data;
 
     }
@@ -159,13 +179,34 @@ class School_model extends CI_Model
         $this->db->from('attendance');
         $this->db->join('class','class.id=attendance.class_id');
         $this->db->where('class.user_id',$user_id);
-        $this->db->order_by('date','asc');
+        $this->db->order_by('attendance.updated','desc');
         $query=$this->db->get();
         $data=array();
+        $date='';
+        $index=0;
+        $total=0;
+        $present=0;
         if($query->num_rows()>0){
             foreach($query->result_array() as $row){
-                $data[]=$row;
+                if($date=='')$date=$row['date'];
+                if($date==$row['date']){
+                    $total+=(int)$row['total_student'];
+                    $present+=(int)$row['present'];
+                    $data[$index][]=$row;
+                }else{
+                    $data[$index][0]['total_present']=$present;
+                    $data[$index][0]['full_student']=$total;
+                    $index++;
+                    $date=$row['date'];
+                    $data[$index][]=$row;
+                    $total=(int)$row['total_student'];
+                    $present=(int)$row['present'];
+                }
             }
+
+                $data[$index][0]['total_present']=$present;
+                $data[$index][0]['full_student']=$total;
+
             return $data;
         }else{
             return false;

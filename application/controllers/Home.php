@@ -163,13 +163,22 @@ class Home extends CI_Controller {
         }
     }
     function getAllIRStudents(){
-
+        $type=$this->input->get('type');
         if($this->ion_auth->logged_in()){
-            $user=$this->ion_auth->user()->row();
-            $response['students']=$this->school_model->getAllIRStudents($user->id);
-            $response['success']=true;
-            echo json_encode($response);
+            if($type==null){
+
+                $user=$this->ion_auth->user()->row();
+                $response['students']=$this->school_model->getAllIRStudents($user->id);
+                $response['success']=true;
+                echo json_encode($response);
+            }else{
+                $data=$this->school_model->getAllIRStudents(null,0,null);
+                $response['students']=$data['students'];
+                $response['total']=$data['total'];
+            }
+                
         }
+            
 
     }
 
@@ -187,6 +196,7 @@ class Home extends CI_Controller {
         if($this->ion_auth->is_admin()&&$id!=null){
             $response['attendance']=$this->school_model->getSchoolAttendence($id);
             $response['school_info']=$this->school_model->getUserInfo($id);
+            $response['irregular_student']=$this->school_model->getAllIRStudents($id);
             $response['success']=true;
             echo json_encode($response);
         }

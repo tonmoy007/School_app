@@ -60,10 +60,15 @@ app.controller('admin_school',function($scope,$http,$routeParams){
         url:'index.php/home/getSchoolAttendence?id='+$scope.school_id,
     }).success(function(response){
         console.log(response);
+        // return;
         if(response.success){
             $scope.schoolLoading=false;
             $scope.school_attendence=response.attendance;
             $scope.school_info=response.school_info;
+            $scope.irregular_student=response.irregular_student;
+            angular.element(document.getElementById('school_attendence')).load(function(){
+                $('.collapse').collapse();
+            });
         }
     }).error(function(response) {
         /* Act on the event */
@@ -73,7 +78,7 @@ app.controller('admin_school',function($scope,$http,$routeParams){
        $http.get('index.php/home/getAttendence',{}).then(function(response){
         $scope.attendence=response.data;
         $scope.attendence.total=parseInt($scope.attendence.total);
-        $scopr.attendence.present=parseInt($scope.attendence.present);
+        $scope.attendence.present=parseInt($scope.attendence.present);
         $scope.attendence.percent=($scope.attendence.present/$scope.attendence.total)*100;
        },function(response){
 

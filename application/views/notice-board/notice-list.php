@@ -10,8 +10,8 @@
         </span>
         <span flex></span>
         <a href="{{notice.notice_file.dirname+'/'+notice.notice_file.basename}}" download="{{notice.notice_file.basename}}" target="_blank">
-            <img ng-src="{{notice.notice_file.dirname+'/'+notice.notice_file.basename}}" ng-if="notice.notice_file&&notice.notice_file.extension!='pdf'" alt="" class="md-avatar no-circle pull-right">
-            <img ng-src="assets/img/accessories/pdf-document-blue.svg" ng-if="notice.notice_file&&notice.notice_file.extension=='pdf'" alt="" class="md-avatar no-circle pull-right">
+            <img ng-src="{{notice.notice_file.dirname+'/thumb/'+notice.notice_file.basename}}" ng-if="notice.notice_file&&notice.notice_file.extension!='pdf'" alt="" class="md-avatar no-circle">
+            <img ng-src="assets/img/accessories/pdf-document-blue.svg" ng-if="notice.notice_file&&notice.notice_file.extension=='pdf'" alt="" class="md-avatar no-circle ">
             <md-tooltip md-direction="top" md-delay="800">
               ডাউনলোড করতে ক্লিক করুন
             </md-tooltip>

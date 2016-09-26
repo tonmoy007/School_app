@@ -40,8 +40,8 @@ html{
 		font-family: 'Lato', Arial, sans-serif;
 		line-height: 60px;
 }
-.bg-gray{
-	background-color: #aaa;
+.bg-grey{
+	background-color: #aaa!important;
 	color: #fff;
 }
 .gn-menu-main {
@@ -487,7 +487,16 @@ md-input-container.in_line .md-errors-spacer{
 .rgba-blue{
 	background-color:  rgba(63, 81, 181, 0.66)!important;
 	color: #fff;
+}.rgba-blue-light{
+	background-color:  rgba(19, 38, 230, 0.33)!important;
+		color: #fff;
 }
 .pad-l-6{
 	padding-left: 60px;
+}
+.m-r-1{
+	margin-right: 10px;
+}
+md-toolbar.button{
+	cursor: pointer;
 }

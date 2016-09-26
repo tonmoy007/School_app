@@ -35,7 +35,7 @@
             <input ng-model="class.total_student" name="total" type="number" required="true">
             <div ng-messages="addClassForm.total.$error" role="alert">
               <div ng-message="required">
-                You must iclude total student quantity
+                You must include total student quantity
               </div>
             </div>
           </md-input-container>
